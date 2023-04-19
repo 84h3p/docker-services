@@ -3,3 +3,11 @@
 ## Vikunja
 
 todo list 
+
+## Traefik
+
+reverse proxy
+
+## Privatebin
+
+
