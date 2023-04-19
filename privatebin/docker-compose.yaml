@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  privatebin:
+    image: jgeusebroek/privatebin:latest
+    restart: always
+    networks:
+      - router
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=router"
+      - "traefik.http.routers.privatebin.rule=Host(`${TRAEFIK_RULE_HOST}`)"
+      - "traefik.http.routers.privatebin.entrypoints=websecure"
+      - "traefik.http.routers.privatebin.tls.certresolver=letsencrypt"
+    volumes:
+      - ./app/data:/privatebin/data
+      - ./app/cfg:/privatebin/cfg
+
+networks:
+  router:
+    external: true
