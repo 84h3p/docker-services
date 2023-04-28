@@ -10,4 +10,8 @@ reverse proxy
 
 ## Privatebin
 
+pastebin service
 
+## Searx 
+
+search thing
