@@ -1,0 +1,4 @@
+---
+- hosts: docker-services
+  roles:
+    - role: 'roles/docker-install'

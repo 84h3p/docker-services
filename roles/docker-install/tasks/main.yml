@@ -1,0 +1,8 @@
+---
+# tasks file for docker-install
+
+- name: Install Docker
+  script: files/get_docker.sh
+
+- name: Create Docker network
+  ansible.builtin.shell: docker network create router
